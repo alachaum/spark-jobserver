@@ -37,7 +37,6 @@ JAVA_OPTS="-XX:MaxDirectMemorySize=$MAX_DIRECT_MEMORY \
 
 MAIN="spark.jobserver.JobServer"
 
-PIDFILE=$appdir/spark-jobserver.pid
 if [ -f "$PIDFILE" ] && kill -0 $(cat "$PIDFILE"); then
    echo 'Job server is already running'
    exit 1
